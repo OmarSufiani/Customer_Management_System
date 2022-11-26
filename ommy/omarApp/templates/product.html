@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+  {% load static %}
+ 
+  {% block content %}
+</body>
+      
+   
+<center>
+   
+<hi>ADD PRODUCT</hi>
+<hr>
+      <form action=""method=POST>
+          {% csrf_token %}
+          {{form.errors}}
+          {{form.as_p}}
+          <input type="submit" value="
+          Submit" class="btn btn-secondary
+          ">
+      </form>
+
+</center>
+</body>
+</html>
+
+{% endblock content %}  
+  
+  

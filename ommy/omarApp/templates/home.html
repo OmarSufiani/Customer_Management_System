@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+  
+{% block content %}
+  
+<!DOCTYPE html>
+<html lang="en">
+  
+
+  
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME PAGE</title>
+
+</head>
+
+
+
+<body>
+  
+</br>
+<div>
+  <h2>Products</h2>
+  <hr>
+<div>
+  <table class="table table-sm">
+    <tr>
+        <th>product_name</th>
+        <th>price</th>
+        <th>category</th>
+        <th>description</th>
+        
+        
+    </tr>
+    {% for a in products %}
+      <tr>
+        <td>{{a.product}}</td>
+        <td>{{a.price}}</td>
+        <td>{{a.category}}</td>
+        <td>{{a.description}}</td>
+        
+
+        
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+  
+
+
+</br>
+<div>
+  <h2>CUSTOMER</h2>
+  <hr>
+<div>
+  <table class="table table-sm">
+    <tr>
+        <th>Customer Name</th>
+        <th>contacts</th>
+        <th>email</th>
+        <th>address</th>
+        <th>nationality</th>
+        
+    </tr>
+    {% for a in customers %}
+      <tr>
+        <td>{{a.name}}</td>
+        <td>{{a.contacts}}</td>
+        <td>{{a.email}}</td>
+        <td>{{a.address}}</td>
+        <td>{{a.nationality}}</td>
+        
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+  
+</br>
+<div>
+  <h2>Customer Order</h2>
+  <hr>
+<div>
+  <table class="table table-sm">
+    <tr>
+        <th>item</th>
+        <th>order</th>
+       
+        
+    </tr>
+    {% for a in orders %}
+      <tr>
+        <td>{{a.item}}</td>
+        <td>{{a.order}}</td>
+       
+        
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+  
+  
+
+</body>
+</html>
+
+{% endblock content %}
